@@ -1,0 +1,103 @@
+Generate code to convert below given java code to playwright typescript code
+
+Instruction:
+[MANDATORY] Every method should have proper comments 
+[CRITICAL] Use latest version of playwright and its features
+[IMPORTANT] Make sure the code is easy to understand and executed by anyone who is new to playwright
+
+Context:
+You are an experienced senior test automation engineer and well versed in writing codes to convert java code to playwright typescript code. below is the code to convert 
+package week2.day1;
+
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Login {
+	
+	public static void main(String[] args) {
+				
+		// Step 0) Setup the chromedriver using webdrivermanager software
+		WebDriverManager.chromedriver().setup(); // .exe or binary
+		
+		// Step 1) Launch the chrome browser (Class Name -> ChromeDriver)
+		ChromeDriver driver = new ChromeDriver();
+		
+		// Step 2) Load the URL (http://leaftaps.com/opentaps/control/main) -> get
+		driver.get("http://leaftaps.com/opentaps");
+		
+		// Step 2b) Add common time to wait for all/any elements to load (Write once)
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		
+		// Step 3) Maximize the chrome browser
+		driver.manage().window().maximize();
+		
+		// Step 4) Find the username and type the value (DemoSalesManager)
+		driver.findElement(By.id("username")).sendKeys("DemoSalesManager");
+		
+		// Step 5) Find the password and type the value (crmsfa)
+		driver.findElement(By.id("password")).sendKeys("crmsfa");	
+		
+		// Step 6) Find the login button and click
+		driver.findElement(By.className("decorativeSubmit")).click();
+		
+		// Step 7) Verify the title 
+		String title = driver.getTitle();
+		System.out.println(title);
+
+	}
+
+}
+
+Example:
+import { test, expect } from '@playwright/test';
+
+test('Successful login with valid credentials', async ({ page }) => {
+  // Navigate to the login page
+  await page.goto('https://example.com/login'); // Replace with your actual login page URL
+
+  // Fill in the username field
+  await page.fill('input[name="username"]', 'your_username'); // Replace with your username selector and value
+
+  // Fill in the password field
+  await page.fill('input[name="password"]', 'your_password'); // Replace with your password selector and value
+
+  // Click the login button
+  await page.click('button[type="submit"]'); // Replace with your login button selector
+
+  // Assert that the login was successful (e.g., check for a welcome message or redirection)
+  await expect(page.locator('text="Welcome, User!"')).toBeVisible(); // Replace with an appropriate success indicator
+});
+
+test('Failed login with invalid credentials', async ({ page }) => {
+  // Navigate to the login page
+  await page.goto('https://example.com/login'); // Replace with your actual login page URL
+
+  // Fill in the username field with invalid data
+  await page.fill('input[name="username"]', 'invalid_username');
+
+  // Fill in the password field with invalid data
+  await page.fill('input[name="password"]', 'invalid_password');
+
+  // Click the login button
+  await page.click('button[type="submit"]');
+
+  // Assert that the login failed (e.g., check for an error message)
+  await expect(page.locator('text="Invalid credentials"')).toBeVisible(); // Replace with your error message selector
+});
+
+Tone:
+Professional mode using proper naming conventions following best practices and no hard coded values
+
+Output:
+Output should be well structured playwright type script code
+
+Persona:
+Make sure the code is easy to understand and executed by anyone who is new to playwright
+
+
+

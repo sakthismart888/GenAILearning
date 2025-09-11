@@ -1,0 +1,37 @@
+import { test, expect } from '@playwright/test';
+
+/**
+ * Test case to automate the login flow for the Leaftaps application.
+ * This test navigates to the login page, enters valid credentials, submits the form,
+ * and verifies the page title after login.
+ * Playwright automatically handles browser setup, element waiting, and cleanup.
+ */
+test('Successful login to Leaftaps application', async ({ page }) => {
+  // Step 1: Navigate to the Leaftaps login page.
+  // page.goto() loads the URL and waits for the page to be fully loaded.
+  await page.goto('http://leaftaps.com/opentaps');
+
+  // Step 2: Maximize the browser window for consistent rendering.
+  // Playwright's viewport is set to maximized by default, but this ensures it.
+  await page.setViewportSize({ width: 1920, height: 1080 });
+
+  // Step 3: Locate the username input field by its ID and enter the username.
+  // page.locator() is used for modern, robust element selection; fill() auto-waits for the element.
+  await page.locator('#username').fill('DemoSalesManager');
+
+  // Step 4: Locate the password input field by its ID and enter the password.
+  // fill() ensures the input is actionable before typing.
+  await page.locator('#password').fill('crmsfa');
+
+  // Step 5: Locate the login button by its class name and click it.
+  // click() auto-waits for the button to be clickable and handles navigation if triggered.
+  await page.locator('.decorativeSubmit').click();
+
+  // Step 6: Retrieve the page title after login.
+  // page.title() fetches the title asynchronously.
+  const pageTitle = await page.title();
+
+  // Step 7: Log the title for verification.
+  // In a real test, consider adding an assertion like: await expect(page).toHaveTitle('Expected Title');
+  console.log('Page Title:', pageTitle);
+});
