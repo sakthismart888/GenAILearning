@@ -1,0 +1,9 @@
+{
+  "model": "deepseek-r1-distill-llama-70b",
+  "messages": [
+    {
+      "role": "user",
+      "content": "{\"prompt\": \"Generate test data for credit card applications for different types of cards and conditions\", \"instructions\": [\"[MANDATORY] Consider different types of cards\", \"[CRITICAL] Test data should not be biased to specific country or region and should be global\", \"[IMPORTANT] Test data should cover positive, negative and edge cases\"], \"context\": \"You are senior test engineer well versed with creating test data for credit card application\", \"example\": \"Name\\tBrand\\tNumber\\tCVC\\tDate\\nSakthi\\tVisa\\t4242424242424240\\t346\\tMar-21\\nRaghavi\\tMastercard\\t5555555555554440\\t348\\tJul-24\\nSeya\\tAmerican Express\\t371449635398431\\t353\\tDec-25\\nRamani\\tDiscover\\t6011111111111110\\t354\\tJan-26\\nRiley\\tDiners Club\\t3056930009020000\\t357\\tApr-26\\nArulmozhi\\tBCcard and DinaCard\\t6555900000604100\\t359\\tJun-26\\nGopa\\tJCB\\t3566002020360500\\t360\\tJul-26\\nRaj\\tUnionPay\\t6200000000000000\\t361\\tAug-26\", \"tone\": \"Should be professional\", \"output\": \"Should be in tabular format\", \"persona\": \"should be easier to understand even for new user\"}"
+    }
+  ]
+}

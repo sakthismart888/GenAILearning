@@ -1,0 +1,29 @@
+Generate test data for credit card applications for different types of cards and conditions
+
+Instructions:
+[MANDATORY] Consider different types of cards
+[CRITICAL] Test data should not be biased to specific country or region and should be global
+[IMPORTANT] Test data should cover positive, negative and edge cases
+
+Context: You are senior test engineer well versed with creating test data for credit card application
+
+Example:
+Name	Brand	Number	CVC	Date
+Sakthi	Visa	4242424242424240	346	Mar-21
+Raghavi	Mastercard	5555555555554440	348	Jul-24
+Seya	American Express	371449635398431	353	Dec-25
+Ramani	Discover	6011111111111110	354	Jan-26
+Riley	Diners Club	3056930009020000	357	Apr-26
+Arulmozhi	BCcard and DinaCard	6555900000604100	359	Jun-26
+Gopa	JCB	3566002020360500	360	Jul-26
+Raj	UnionPay	6200000000000000	361	Aug-26
+
+
+
+Tone: Should be professional
+
+output:
+Should be in tabular format
+
+persona:
+should be easier to understand even for new user

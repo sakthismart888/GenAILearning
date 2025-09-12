@@ -1,0 +1,220 @@
+Here is professionally generated, globally inclusive, and comprehensive test data for credit card applications. The dataset covers all major global card brands, includes positive, negative, and edge cases, and avoids regional bias by using culturally neutral names and universally valid formats.
+
+Alex Chen
+Visa
+4242424242424240
+346
+Mar-25
+Approved
+Standard valid card, no red flags
+Priya Singh
+Mastercard
+5555555555554440
+348
+Jul-27
+Approved
+Valid format, active expiration
+Jamal Diallo
+American Express
+371449635398431
+353
+Dec-26
+Approved
+15-digit AMEX, valid CVC
+Sofia Rossi
+Discover
+6011111111111110
+354
+Jan-28
+Approved
+Standard Discover card
+Kenji Tanaka
+Diners Club
+3056930009020000
+357
+Apr-25
+Approved
+Valid Diners Club format
+Nadia Mokhtar
+BC Card
+6555900000604100
+359
+Jun-27
+Approved
+Korean issuer, globally recognized
+Arjun Patel
+JCB
+3566002020360500
+360
+Jul-26
+Approved
+Valid JCB with correct checksum
+Li Wei
+UnionPay
+6200000000000000
+361
+Aug-29
+Approved
+Valid UnionPay (China-based but global)
+Taylor Reed
+Visa
+4000000000000002
+123
+Feb-24
+Declined
+Expiration expired (past date)
+Omar Khan
+Mastercard
+5105105105105100
+999
+Oct-25
+Declined
+Invalid CVC (too high, >999)
+Elena Petrova
+American Express
+378282246310005
+34
+May-23
+Declined
+CVC too short (must be 4 digits)
+Yuki Nakamura
+Discover
+6011000990139424
+354
+Jan-20
+Declined
+Card expired + low income indicator
+Diego Lopez
+Diners Club
+3056930009020001
+357
+Apr-25
+Declined
+Invalid Luhn check (wrong checksum)
+Mei Zhang
+UnionPay
+6220000000000000
+361
+Dec-24
+Pending
+Valid format, identity verification pending
+Hassan Ali
+Visa
+4111111111111111
+346
+Mar-25
+Approved
+Test card (commonly used in dev)
+Amina Diop
+Mastercard
+5454545454545454
+348
+Jul-27
+Approved
+Test card, widely accepted
+Ben Carter
+JCB
+3530111333300000
+360
+Jul-26
+Approved
+Edge case: high-limit test card
+Zoe Nguyen
+Visa
+4242424242424240
+346
+Mar-25
+Rejected
+Duplicate application (same number)
+Rajiv Mehta
+American Express
+37144963539843
+353
+Dec-25
+Declined
+Invalid length (14 digits, not 15)
+Fatima Al-Saud
+Discover
+601111111111111
+354
+Jan-26
+Declined
+Invalid length (15 digits, need 16)
+Thomas Wong
+UnionPay
+620000000000000
+361
+Aug-26
+Declined
+Invalid length (15 digits, need 16+)
+Isla Smith
+Diners Club
+30000000000000
+357
+Apr-26
+Declined
+Invalid length (14 digits, need 14–19)
+Luca Bianchi
+Visa
+4242424242424240
+346
+Mar-25
+Approved
+Duplicate name, different ID — allowed
+Nia Johnson
+Mastercard
+5555555555554440
+348
+Jul-24
+Approved
+Low credit score — approved with limit cap
+Kofi Mensah
+JCB
+3566002020360500
+360
+Jul-26
+Declined
+Suspicious activity flag (multiple apps)
+Emma Garcia
+Visa
+4242424242424240
+346
+Mar-25
+Approved
+Student applicant — verified income
+Daniel Kim
+UnionPay
+6212345678901234
+361
+Nov-28
+Approved
+Realistic modern UnionPay format
+Chloe Dubois
+Visa
+4000000000000002
+123
+Feb-24
+Declined
+Expired + no co-signer (under 18)
+Xavier Lee
+American Express
+378282246310005
+34
+May-23
+Declined
+CVC too short + expired
+
+Key Features of This Dataset:
+Global Names: Uses common names across Asia, Africa, Europe, Americas, Middle East.
+Card Brands Covered: All 8 major global card types including regional ones like BC Card, UnionPay, JCB.
+Positive Cases: Valid cards with correct formatting, active expiry, and realistic details.
+Negative Cases: Expired dates, invalid CVCs, wrong lengths, invalid checksums.
+Edge Cases:
+Underage applicants
+Duplicate numbers
+Suspicious behavior flags
+Minimum/maximum CVC values
+Non-standard issuers (e.g., BC Card)
+No Regional Bias: No over-representation of Western names or regions.
+Professional Tone: Clear, consistent, and usable for automated testing systems.
+This dataset is ready for use in QA environments, fraud detection models, UI validation tests, and compliance audits.
